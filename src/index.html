@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <script src="js/all.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <button class="navbar-toggler navbar-toggler-sm" type="button" data-toggle="collapse" onclick="toggleSideBar();">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div style="-webkit-app-region: drag;-webkit-user-select: none;user-select:none">
+      <a class="navbar-brand" href="#">Terrence Johnson IT - Samples </a>
+    </div>
+    <span class="float-right">
+      <a id="btnClose" class="btn text-danger" href="#" onclick="closeapp();">
+        <i class="fas fa-times-circle"></i>
+      </a>
+    </span>
+  </nav>
+  <div class="container">
+    <div id="mySidebar" class="sidebar">
+      <center>
+        <h3>Samples</h3>
+      </center>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h4 class="mb-1">System Info</h4>
+          </div>
+          <p class="mb-1">
+            Monitor some system resources.
+          </p>
+        </a>
+      </div>
+    </div>
+    <div id="mainDiv">
+    </div>
+  </div>
+  <div id="statusbar">
+    <p id="statustext">All good</p>
+  </div>
+  <script type="text/javascript">
+    function closeapp() {
+      window.IPC.send('close-app');
+    }
+
+    function toggleSideBar() {
+      var w = $("#mySidebar").css('width');
+      console.log(w);
+      if (w == '250px') {
+        $("#mySidebar").css('width', '0px');
+      } else {
+        $("#mySidebar").css('width', '250px');
+      }
+    }
+  </script>
+</body>
+
 </html>
