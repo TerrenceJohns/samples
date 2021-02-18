@@ -1,6 +1,4 @@
 # samples
-![TJIT Pic](/src/img/terrence.jpg)
-
 ## Terrence Johnson IT - Samples
 
 This electron application is an aggregation of work samples. I enjoy electron, although most paying work is done with vb.net, Dot Net Nuke, Vuejs for web applications. My background is in the Insurance industry 
