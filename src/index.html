@@ -3,21 +3,83 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello World!</title>
+  <title>Samples</title>
   <script src="js/all.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/vue-router.js"></script>
+
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="index.css">
+
+  <!-- templates -->
+  <script id="tmpSystemInfo" type="text/html">
+    <div>
+      <h2>System Info</h2>
+      <hr>
+      <h3>Operation System</h3>
+      <table class="table table-sm table-borderless">
+        <tr>
+          <td class="tdLabel">
+            Operation system:
+          </td>  
+          <td>
+            {{Info.OS}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </script>
+  <script id="tmpOverview" type= text/html>
+    <div>
+      <h2>Terrence Joihnson IT - Samples</h2>
+    </div>
+  </script>
+  <script id="tmpMain" type="text/html">
+    <div>
+      <div id="mySidebar" class="sidebar">
+        <center>
+          <h3>Samples</h3>
+        </center>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h4 class="mb-1">Overview</h4>
+            </div>
+            <p class="mb-1">
+              Overview of the application.
+            </p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h4 class="mb-1">System Info</h4>
+            </div>
+            <p class="mb-1">
+              Monitor some system resources.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="mainDiv">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+      
+            
+    </div>
+    
+  </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary">
+  <nav class="navbar navbar-dark bg-primary pr-0">
     <button class="navbar-toggler navbar-toggler-sm" type="button" data-toggle="collapse" onclick="toggleSideBar();">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div style="-webkit-app-region: drag;-webkit-user-select: none;user-select:none">
+    <div style="-webkit-app-region: drag;-webkit-user-select: none;user-select:none;width:70%;text-align:center">
       <a class="navbar-brand" href="#">Terrence Johnson IT - Samples </a>
     </div>
     <span class="float-right">
@@ -26,29 +88,10 @@
       </a>
     </span>
   </nav>
-  <div class="container">
-    <div id="mySidebar" class="sidebar">
-      <center>
-        <h3>Samples</h3>
-      </center>
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h4 class="mb-1">System Info</h4>
-          </div>
-          <p class="mb-1">
-            Monitor some system resources.
-          </p>
-        </a>
-      </div>
-    </div>
-    <div id="mainDiv">
-      <iframe src="" frameborder="0" stytle="width:100%;height:90vh"></iframe>
-    </div>
+  <div id="app" class="container">
+    <router-view></router-view>
   </div>
-  <div id="statusbar">
-    <p id="statustext">All good</p>
-  </div>
+  
   <script type="text/javascript">
     function closeapp() {
       window.IPC.send('close-app');
@@ -64,6 +107,11 @@
       }
     }
   </script>
+  <script src="js/common/field.js"></script>
+  <script src="js/common/select-field.js"></script>
+  <script src="js/apps/system-info.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
