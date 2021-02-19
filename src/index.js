@@ -2,8 +2,11 @@ const {
   app,
   ipcMain,
   BrowserWindow,
-  dialog
+  dialog,
+  webviewTag,
+  ipcRenderer
 } = require('electron');
+const os = require('os');
 //const jsonServer = require('json-server')
 //var sv = jsonServer.create();
 //var router = jsonServer.router(path.join(__dirname, 'database.json'));
@@ -23,15 +26,16 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     frame: false,
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 700,
     webPreferences: {
       nodeIntegration: false,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      webviewTag:true
     }
   });
  
-  mainWindow.maximize();
+  //mainWindow.maximize();
  
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -39,6 +43,7 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
   mainWindow.removeMenu();
+  
 };
 
 // This method will be called when Electron has finished
@@ -70,4 +75,17 @@ ipcMain.on('close-app', function () {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+ipcMain.on('system-info', function () {
+  var sysinfo = {};
+  sysinfo.OS = os.type();
+  sysinfo.version = os.version();
+  sysinfo.hostname = os.hostname();
+  sysinfo.home = os.homedir();
+  sysinfo.freeMem = os.freemem();
+  sysinfo.totalMem = os.totalmem();
+  sysinfo.cpus = os.cpus();
+  sysinfo.network = os.networkInterfaces();
+  ipcRenderer.send('system-info-respnse',sysinfo);
 });
