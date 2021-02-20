@@ -12,7 +12,7 @@ I've used the following libraries to build the front end:
 Servers and web apis are mocked with json-server on localhost ports 9001 through 9010.
  
 
-You can simply download the executable file for Windows. Its a one click install and you should be able to view the working samples. If you're on Mac or Linux, your can build from soure. You require Node and NPM installed on you machine.
+You can simply download the executable file for Windows. Its a one click install and you should be able to view the working samples. If you're on Mac or Linux, you can build from source. You require Node and NPM installed on you machine.
 
 ### Installation
 ```
