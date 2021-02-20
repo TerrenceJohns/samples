@@ -13,7 +13,14 @@ Vue.filter('mediumDate', function (value) {
 });
 
  const routes = [
-   {path:"/",component:Main}];
+   {
+       path:"/",
+       component:Main,
+       children:[
+           {path:"",component:Overview},
+           {path:"sysinfo",component:SystemInfo}
+       ]
+    }];
 
  const router = new VueRouter({
    routes: routes // short for `routes: routes`

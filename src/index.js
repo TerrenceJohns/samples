@@ -2,11 +2,11 @@ const {
   app,
   ipcMain,
   BrowserWindow,
-  dialog,
-  webviewTag,
-  ipcRenderer
+  globalShortcut
 } = require('electron');
 const os = require('os');
+const si = require('systeminformation');
+const us = require('underscore'); 
 //const jsonServer = require('json-server')
 //var sv = jsonServer.create();
 //var router = jsonServer.router(path.join(__dirname, 'database.json'));
@@ -34,6 +34,9 @@ const createWindow = () => {
       webviewTag:true
     }
   });
+  globalShortcut.register('CommandOrControl+Shift+I', () => {
+    mainWindow.webContents.openDevTools();
+  })
  
   //mainWindow.maximize();
  
@@ -41,7 +44,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
  
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   mainWindow.removeMenu();
   
 };
@@ -77,15 +80,39 @@ ipcMain.on('close-app', function () {
   }
 });
 
-ipcMain.on('system-info', function () {
-  var sysinfo = {};
-  sysinfo.OS = os.type();
-  sysinfo.version = os.version();
-  sysinfo.hostname = os.hostname();
-  sysinfo.home = os.homedir();
-  sysinfo.freeMem = os.freemem();
-  sysinfo.totalMem = os.totalmem();
-  sysinfo.cpus = os.cpus();
-  sysinfo.network = os.networkInterfaces();
-  ipcRenderer.send('system-info-respnse',sysinfo);
+ipcMain.on('system-info', function (event) {
+  si.currentLoad()
+  .then(function(data){
+    si.processes()
+    .then(function(pdata){
+      var sysinfo = {};
+      sysinfo.OS = os.type();
+      sysinfo.version = os.version();
+      sysinfo.hostname = os.hostname();
+      sysinfo.home = os.homedir();
+      sysinfo.freeMem = os.freemem();
+      sysinfo.totalMem = os.totalmem();
+      sysinfo.cpus = os.cpus();
+      sysinfo.network = os.networkInterfaces();
+      for (let index = 0; index < sysinfo.cpus.length; index++) {
+        sysinfo.cpus[index]['load'] = data.cpus[index].load;
+      } 
+      sysinfo.processesCpu = us.sortBy(pdata.list,function(pc){
+        return Number(pc.pcpu);
+      });
+      sysinfo.processesCpu = us.first(sysinfo.processesCpu.reverse(),5);
+      sysinfo.processesMem = us.sortBy(pdata.list,'pmem');
+      sysinfo.processesMem = us.first(sysinfo.processesMem.reverse(),5);
+      
+      event.reply('system-info-response',sysinfo);
+    }).catch(function(err){
+      console.error(err);
+    });
+    
+  
+  })
+  .catch(function(err){
+    console.error(err);
+  });
+ 
 });
