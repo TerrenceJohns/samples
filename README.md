@@ -14,7 +14,7 @@ Servers and web apis are mocked with json-server on localhost ports 9001 through
 
 You can simply download the executable file for Windows. Its a one click install and you should be able to view the working samples. If you're on Mac or Linux, your can build from soure. You require Node and NPM installed on you machine.
 
-###Installation
+### Installation
 ```
 git clone https://github.com/TerrenceJohns/samples
 cd samples
