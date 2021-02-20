@@ -15,6 +15,11 @@ const Main = {
             var vm = this;
             vm.$router.push('/sysinfo');
             toggleSideBar();
+        },
+        gotoOnlineShop:function(){
+            var vm = this;
+            vm.$router.push('/onlineshop');
+            toggleSideBar();
         }
     },
     mounted:function(){
