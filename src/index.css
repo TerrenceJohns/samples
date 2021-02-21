@@ -96,3 +96,88 @@ body {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+
+.slide-leave-active,
+.slide-enter-active {
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.slide-enter,
+.slide-leave-to {
+    opacity: 0;
+    transform: translateX(-30%);
+}  
+
+
+.mobileContainer {
+  
+  overflow-y:auto;
+  border-image:url(img/mobileFrame.png) 25 stretch;
+  cursor:url(img/mobileCursor.png),auto;
+
+}
+.mobileContainer.portrait{
+  height:92vh;
+  border-top:60px solid transparent;
+  border-bottom:60px solid transparent;
+  border-left:30px solid transparent;
+  border-right:30px solid transparent;
+} 
+.mobileContainer.landscape{
+  height:89vh;
+  border-left:60px solid transparent;
+  border-right:60px solid transparent;
+  border-top:30px solid transparent;
+  border-bottom:30px solid transparent;
+} 
+
+
+
+
+
+/* width */
+
+.mobileContainer::-webkit-scrollbar {
+  width: 2px;
+  display:none;
+}
+
+/* Track */
+.mobileContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke; 
+  border-radius: 1px;
+}
+ 
+/* Handle */
+.mobileContainer::-webkit-scrollbar-thumb {
+  background: lightgrey; 
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+.mobileContainer::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
+
+.appContainer::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+/* Track */
+.appContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke; 
+  border-radius: 4px;
+}
+ 
+/* Handle */
+.appContainer::-webkit-scrollbar-thumb {
+  background: lightgrey; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.appContainer::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
+

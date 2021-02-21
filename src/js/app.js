@@ -18,7 +18,8 @@ Vue.filter('mediumDate', function (value) {
        component:Main,
        children:[
            {path:"",component:Overview},
-           {path:"sysinfo",component:SystemInfo}
+           {path:"sysinfo",component:SystemInfo},
+           {path:"onlineshop",component:OnlineShop}
        ]
     }];
 

@@ -7,6 +7,7 @@ const {
 const os = require('os');
 const si = require('systeminformation');
 const us = require('underscore'); 
+
 //const jsonServer = require('json-server')
 //var sv = jsonServer.create();
 //var router = jsonServer.router(path.join(__dirname, 'database.json'));
@@ -16,6 +17,7 @@ const us = require('underscore');
 //var splash;
 
 const path = require('path');
+var mainWin; 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -28,6 +30,7 @@ const createWindow = () => {
     frame: false,
     width: 1000,
     height: 700,
+    
     webPreferences: {
       nodeIntegration: false,
       preload: path.join(__dirname, 'preload.js'),
@@ -37,7 +40,7 @@ const createWindow = () => {
   globalShortcut.register('CommandOrControl+Shift+I', () => {
     mainWindow.webContents.openDevTools();
   })
- 
+  
   //mainWindow.maximize();
  
   // and load the index.html of the app.
@@ -46,6 +49,7 @@ const createWindow = () => {
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
   mainWindow.removeMenu();
+  mainWin = mainWindow; 
   
 };
 
@@ -78,6 +82,23 @@ ipcMain.on('close-app', function () {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+ipcMain.on('tablet-portrait', function () {
+  mainWin.restore();
+  mainWin.setBounds({width:510,height:800});
+  mainWin.maximizable = false;
+  
+});
+ipcMain.on('tablet-landscape', function () {
+  mainWin.restore();
+  mainWin.setBounds({width:800,height:570});
+  mainWin.maximizable = false;
+  
+});
+ipcMain.on('reset', function () {
+  mainWin.setBounds({width:1000,height:700});
+  mainWin.maximizable = true;
 });
 
 ipcMain.on('system-info', function (event) {
