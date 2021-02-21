@@ -112,12 +112,14 @@ body {
 .mobileContainer {
   
   overflow-y:auto;
-  border-image:url(img/mobileFrame.png) 25 stretch;
+    
   cursor:url(img/mobileCursor.png),auto;
+  
 
 }
 .mobileContainer.portrait{
   height:92vh;
+  border-image:url(img/mobileFrame.png) 65 35 stretch;
   border-top:60px solid transparent;
   border-bottom:60px solid transparent;
   border-left:30px solid transparent;
@@ -125,6 +127,7 @@ body {
 } 
 .mobileContainer.landscape{
   height:89vh;
+  border-image:url(img/mobileFrameLandscape.png) 35 65 stretch;
   border-left:60px solid transparent;
   border-right:60px solid transparent;
   border-top:30px solid transparent;
