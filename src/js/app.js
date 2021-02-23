@@ -15,11 +15,12 @@ Vue.filter('mediumDate', function (value) {
  const routes = [
    {
        path:"/",
-       component:Main,
+       component:httpVueLoader('js/main.vue'),
        children:[
-           {path:"",component:Overview},
-           {path:"sysinfo",component:SystemInfo},
-           {path:"onlineshop",component:OnlineShop}
+           {path:"",component:httpVueLoader('js/apps/overview.vue')},
+           {path:"sysinfo",component:httpVueLoader('js/apps/system-info.vue')},
+           {path:"dbdesigner",component:httpVueLoader('js/apps/db-designer.vue')},
+           {path:"onlineshop",component:httpVueLoader('js/apps/onlineshop.vue')}
        ]
     }];
 
@@ -27,10 +28,22 @@ Vue.filter('mediumDate', function (value) {
    routes: routes // short for `routes: routes`
  });
 
- 
- Vue.component('form-field', Field);
- Vue.component('select-field', SelectField);
- 
+//  router.beforeEach((to, from, next) => {
+//   })
+//   router.beforeResolve((to, from, next) => {
+//     /* must call `next` */
+//   })
+  
+  router.afterEach((to, from) => {
+    if((from.fullPath.indexOf('/onlineshop')!=-1) && (to.fullPath.indexOf('/onlineshop') == -1)) {
+        window.stopServer({filename:'onlineshop.json',port:9001});
+    }
+  });
+ Vue.component('database-table-create',httpVueLoader('js/apps/db-table-create.vue'));
+ Vue.component('data-table-designer',httpVueLoader('js/apps/db-table-designer.vue'));
+ Vue.component('data-editor',httpVueLoader('js/apps/db-data-editor.vue'));
+ Vue.component('database-create',httpVueLoader('js/apps/db-create.vue'))
+
  const app = new Vue({
-     router: router
+    router: router
  }).$mount('#app');

@@ -1,0 +1,88 @@
+{
+  "databases": [
+    {
+      "id": 1,
+      "dbname": "onlineshop",
+      "filename": "onlineshop.json"
+    },
+    {
+      "dbname": "Test",
+      "filename": "Test.json",
+      "id": 2
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "databaseId": 1,
+      "table_name": "suppliers"
+    },
+    {
+      "id": 2,
+      "databaseId": 1,
+      "table_name": "categories"
+    },
+    {
+      "id": 3,
+      "databaseId": 1,
+      "table_name": "categoryspecs"
+    },
+    {
+      "id": 4,
+      "databaseId": 1,
+      "table_name": "products"
+    },
+    {
+      "id": 5,
+      "databaseId": 1,
+      "table_name": "product_specs"
+    },
+    {
+      "id": 6,
+      "databaseId": 1,
+      "table_name": "orders"
+    },
+    {
+      "id": 7,
+      "databaseId": 1,
+      "table_name": "transactions"
+    },
+    {
+      "databaseId": 2,
+      "table_name": "contacts",
+      "id": 8
+    }
+  ],
+  "columns": [
+    {
+      "id": 1,
+      "tableId": 1,
+      "column_name": "id"
+    },
+    {
+      "id": 2,
+      "tableId": 1,
+      "column_name": "code"
+    },
+    {
+      "id": 3,
+      "tableId": 1,
+      "column_name": "name"
+    },
+    {
+      "tableId": 8,
+      "column_name": "id",
+      "id": 4
+    },
+    {
+      "tableId": 8,
+      "column_name": "first_name",
+      "id": 5
+    },
+    {
+      "tableId": 8,
+      "column_name": "last_name",
+      "id": 6
+    }
+  ]
+}

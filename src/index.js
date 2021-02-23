@@ -7,11 +7,10 @@ const {
 const os = require('os');
 const si = require('systeminformation');
 const us = require('underscore'); 
+const jsonServer = require('json-server')
 
-//const jsonServer = require('json-server')
-//var sv = jsonServer.create();
-//var router = jsonServer.router(path.join(__dirname, 'database.json'));
-//const middlewares = jsonServer.defaults();
+var dbmServer;
+var dataServer;
 //const excel = require('node-excel-export');
 //const fs = require('fs');
 //var splash;
@@ -136,4 +135,41 @@ ipcMain.on('system-info', function (event) {
     console.error(err);
   });
  
+});
+
+ipcMain.on('start-dbserver', function(e, args){
+    var sv = jsonServer.create();
+    var router = jsonServer.router(path.join(__dirname, 'data',args.filename));
+    const middlewares = jsonServer.defaults();
+    sv.use(middlewares);
+    sv.use(router);
+    var dbname = args.filename.replace('.json','');
+    if(args.filename == "databases.json") {
+      dbname = 'dbms';
+      dbmServer =  sv.listen(args.port, function () {
+        console.log(`Server: ${dbname} is running on ${args.port}`);
+      });
+    } else {
+      dataServer =  sv.listen(args.port, function () {
+        console.log(`Server: ${dbname} is running on ${args.port}`);
+      });
+    }
+    
+});
+ipcMain.on('stop-dbserver', function(e,args){
+  var dbname = args.filename.replace('.json','');
+  if(args.filename=='databases.json') {
+    if(dbmServer){
+      dbmServer.close(function(){
+        console.log('dbms closed');
+      });
+    } 
+  }  else {
+    if(dataServer){
+      dataServer.close(function(){
+        console.log(`${dbname} closed.`);
+      });
+    }
+  }
+  
 });

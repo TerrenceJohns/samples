@@ -1,5 +1,5 @@
-﻿
-    const SelectField = {
+﻿<script>
+    module.exports = {
         props: {
             value: {
                 type: [Number,String],
@@ -38,3 +38,6 @@
     };
 
 
+
+</script>
+    

@@ -1,0 +1,1434 @@
+{
+  "suppliers":[
+    {
+        "id":1,
+        "code":"ABC",
+        "name":"ABC Tech Supliers"
+    },
+    {
+        "id":2,
+        "code":"AWH",
+        "name":"Awesome Hardware"
+    }
+],
+"categories":[
+    {
+        "id":1,
+        "description":"Computers"
+    },
+    {
+        "id":2,
+        "description":"Laptops"
+    },
+    {
+        "id":3,
+        "description":"All in Ones"
+    },
+    {
+        "id":4,
+        "description":"Monitors"
+    },
+    {
+        "id":5,
+        "description":"Other"
+    }
+    
+],
+"categoryspecs":[
+    {
+        "id":1,
+        "categoryId":1,
+        "name":"Chipset"
+    },
+    {
+        "id":2,
+        "categoryId":1,
+        "name":"Memory"
+    },
+    {
+        "id":3,
+        "categoryId":1,
+        "name":"Storage"
+    },
+    {
+        "id":4,
+        "categoryId":1,
+        "name":"Extras"
+    },
+    {
+        "id":5,
+        "categoryId":1,
+        "name":"OS"
+    },
+    {
+        "id":6,
+        "categoryId":2,
+        "name":"Display"
+    },
+    {
+        "id":7,
+        "categoryId":2,
+        "name":"Chipset"
+    },
+    {
+        "id":8,
+        "categoryId":2,
+        "name":"Memory"
+    },
+    {
+        "id":9,
+        "categoryId":2,
+        "name":"Storage"
+    },
+    {
+        "id":10,
+        "categoryId":2,
+        "name":"Extras"
+    },
+    {
+        "id":11,
+        "categoryId":2,
+        "name":"OS"
+    },
+    {
+        "id":12,
+        "categoryId":3,
+        "name":"Display"
+    },
+    {
+        "id":13,
+        "categoryId":3,
+        "name":"Chipset"
+    },
+    {
+        "id":14,
+        "categoryId":3,
+        "name":"Memory"
+    },
+    {
+        "id":15,
+        "categoryId":3,
+        "name":"Storage"
+    },
+    {
+        "id":16,
+        "categoryId":3,
+        "name":"Extras"
+    },
+    {
+        "id":17,
+        "categoryId":3,
+        "name":"OS"
+    },
+    {
+        "id":18,
+        "categoryId":4,
+        "name":"Model"
+    },
+    {
+        "id":19,
+        "categoryId":4,
+        "name":"Size"
+    },
+    {
+        "id":20,
+        "categoryId":4,
+        "name":"Description"
+    },
+    {
+        "id":21,
+        "categoryId":5,
+        "name":"Make"
+    },
+    {
+        "id":22,
+        "categoryId":5,
+        "name":"Description"
+    },
+    {
+        "id":23,
+        "categoryId":5,
+        "name":"Specs"
+    }
+     
+
+
+],
+"products":[
+    {
+      "id": 1,
+      "categoryId": 2,
+      "code": "CS0001453",
+      "qty": 3,
+      "name": "Dell Inspiron 3542",
+      "warranty": "6 Months Warranty",
+      "cost_price": 4599,
+      "selling_price": 5519,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "code": "CS0001454",
+      "qty": 3,
+      "name": "HP Pavillion X360 11-u000ni",
+      "warranty": "6 Months Warranty",
+      "cost_price": 5799,
+      "selling_price": 6959,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "code": "CS0001455",
+      "qty": 3,
+      "name": "Dell Latitude E5470",
+      "warranty": "6 Months Warranty",
+      "cost_price": 9999,
+      "selling_price": 11999,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "code": "CS0001456",
+      "qty": 3,
+      "name": "Huawei Matebook",
+      "warranty": "20 Months Warranty",
+      "cost_price": 11799,
+      "selling_price": 14159,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "code": "CS0001457",
+      "qty": 3,
+      "name": "Asus Vivobook X543UA",
+      "warranty": "12 Months Warranty",
+      "cost_price": 11999,
+      "selling_price": 14399,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "code": "CS0001458",
+      "qty": 3,
+      "name": "Lenovo ThinkPad T480s",
+      "warranty": "14 Months Vendor Warranty",
+      "cost_price": 12499,
+      "selling_price": 14999,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "code": "CS0001459",
+      "qty": 3,
+      "name": "HP ProBook 450 G7",
+      "warranty": "12 Months Warranty",
+      "cost_price": 12999,
+      "selling_price": 15599,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "code": "CS0001460",
+      "qty": 3,
+      "name": "Lenovo IdeaPad 3 14llL05",
+      "warranty": "12 Months Warranty",
+      "cost_price": 13499,
+      "selling_price": 16199,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "code": "CS0001461",
+      "qty": 3,
+      "name": "Lenovo Ideapad S145",
+      "warranty": "12 Months Warranty",
+      "cost_price": 15399,
+      "selling_price": 18479,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "code": "CS0001462",
+      "qty": 3,
+      "name": "Dell Inspiron 3580",
+      "warranty": "12 Months Warranty",
+      "cost_price": 15499,
+      "selling_price": 18599,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "code": "CS0001463",
+      "qty": 3,
+      "name": "Asus VivoBook X540UBR",
+      "warranty": "12 Months Warranty",
+      "cost_price": 15999,
+      "selling_price": 19199,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "code": "CS0001464",
+      "qty": 3,
+      "name": "Lenovo ThinkPad E490",
+      "warranty": "12 Months Warranty",
+      "cost_price": 15999,
+      "selling_price": 19199,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 13,
+      "categoryId": 3,
+      "code": "CS0001465",
+      "qty": 3,
+      "name": "HP EliteDesk 8300 AIO",
+      "warranty": "6 Months Warranty",
+      "cost_price": 4999,
+      "selling_price": 5999,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "code": "CS0001466",
+      "qty": 3,
+      "name": "Lenovo ThinkCentre M90z AIO",
+      "warranty": "6 Months Warranty",
+      "cost_price": 5299,
+      "selling_price": 6359,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 15,
+      "categoryId": 1,
+      "code": "CS0001467",
+      "qty": 3,
+      "name": "Dell Optiplex 755 SFF",
+      "warranty": "6 Months Warranty",
+      "cost_price": 1799,
+      "selling_price": 2159,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 16,
+      "categoryId": 1,
+      "code": "CS0001468",
+      "qty": 3,
+      "name": "Dell Optiplex 3020 MT",
+      "warranty": "6 Months Warranty",
+      "cost_price": 2699,
+      "selling_price": 3239,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 17,
+      "categoryId": 1,
+      "code": "CS0001469",
+      "qty": 3,
+      "name": "HP RP5800 Desktop",
+      "warranty": "6 Months Warranty",
+      "cost_price": 2699,
+      "selling_price": 3239,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 18,
+      "categoryId": 1,
+      "code": "CS0001470",
+      "qty": 3,
+      "name": "Dell Optiplex 7010 MT",
+      "warranty": "6 Months Warranty",
+      "cost_price": 2999,
+      "selling_price": 3599,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 19,
+      "categoryId": 1,
+      "code": "CS0001471",
+      "qty": 4,
+      "name": "Lenovo ThinkCentre M73 Tiny",
+      "warranty": "6 Months Warranty",
+      "cost_price": 3199,
+      "selling_price": 3839,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 20,
+      "categoryId": 1,
+      "code": "CS0001472",
+      "qty": 3,
+      "name": "Lenovo ThinkCentre M73 Tiny",
+      "warranty": "6 Months Warranty",
+      "cost_price": 3599,
+      "selling_price": 4319,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 21,
+      "categoryId": 1,
+      "code": "CS0001473",
+      "qty": 3,
+      "name": "Dell Optiplex 3020 MT",
+      "warranty": "6 Months Warranty",
+      "cost_price": 3899,
+      "selling_price": 4679,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 22,
+      "categoryId": 1,
+      "code": "CS0001474",
+      "qty": 8,
+      "name": "Lenovo Think Centre M710q Tiny",
+      "warranty": "12 Months Warranty",
+      "cost_price": 3999,
+      "selling_price": 4799,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 23,
+      "categoryId": 1,
+      "code": "CS0001475",
+      "qty": 3,
+      "name": "Dell Optiplex 990 DT",
+      "warranty": "6 Months Warranty",
+      "cost_price": 4299,
+      "selling_price": 5159,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 24,
+      "categoryId": 1,
+      "code": "CS0001476",
+      "qty": 3,
+      "name": "Dell Optiplex 3010 SFF",
+      "warranty": "6 Months Warranty",
+      "cost_price": 4799,
+      "selling_price": 5759,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 25,
+      "categoryId": 1,
+      "code": "CS0001477",
+      "qty": 3,
+      "name": "Dell Optiplex 3050 SFF",
+      "warranty": "12 Months Warranty",
+      "cost_price": 4999,
+      "selling_price": 5999,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 26,
+      "categoryId": 1,
+      "code": "CS0001478",
+      "qty": 3,
+      "name": "Lenovo ThinkCentre M710q Tiny",
+      "warranty": "6 Months Warranty",
+      "cost_price": 5899,
+      "selling_price": 7079,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 27,
+      "categoryId": 1,
+      "code": "CS0001479",
+      "qty": 3,
+      "name": "Hp EliteDesk 800 G2 SFF",
+      "warranty": "6 Months Warranty",
+      "cost_price": 5899,
+      "selling_price": 7079,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 28,
+      "categoryId": 1,
+      "code": "CS0001480",
+      "qty": 5,
+      "name": "Lenovo Think Centre M910q Tiny",
+      "warranty": "12 Months Warranty",
+      "cost_price": 6499,
+      "selling_price": 7799,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 29,
+      "categoryId": 1,
+      "code": "CS0001481",
+      "qty": 2,
+      "name": "Lenovo ThinkCentre M93 FT",
+      "warranty": "6 Months Warranty",
+      "cost_price": 6499,
+      "selling_price": 7799,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 30,
+      "categoryId": 1,
+      "code": "CS0001482",
+      "qty": 3,
+      "name": "Dell Optiplex 5060 FT",
+      "warranty": "14 Months Vendor Warranty",
+      "cost_price": 7499,
+      "selling_price": 8999,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 31,
+      "categoryId": 1,
+      "code": "CS0001483",
+      "qty": 3,
+      "name": "HP ProDesk 400 G5 Tiny",
+      "warranty": "32 Months Vendor Warrnaty",
+      "cost_price": 8699,
+      "selling_price": 10439,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 32,
+      "categoryId": 1,
+      "code": "CS0001484",
+      "qty": 2,
+      "name": "HP Elitedesk 800 G5 Tiny",
+      "warranty": "31 Months Vendor Warrnaty",
+      "cost_price": 8999,
+      "selling_price": 10799,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 33,
+      "categoryId": 4,
+      "code": "CS0001485",
+      "qty": 3,
+      "name": "Phillips 17`` 4:3 Monitor",
+      "warranty": "6 Months Warranty",
+      "cost_price": 399,
+      "selling_price": 479,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 34,
+      "categoryId": 4,
+      "code": "CS0001486",
+      "qty": 3,
+      "name": "AOC E970S",
+      "warranty": "6 Months Warranty",
+      "cost_price": 749,
+      "selling_price": 899,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 35,
+      "categoryId": 4,
+      "code": "CS0001487",
+      "qty": 3,
+      "name": "HP E233",
+      "warranty": "34 Months Warranty",
+      "cost_price": 3499,
+      "selling_price": 4199,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 36,
+      "categoryId": 4,
+      "code": "CS0001488",
+      "qty": 3,
+      "name": "LG 27`` Monitor",
+      "warranty": "12 Months Warranty",
+      "cost_price": 3699,
+      "selling_price": 4439,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    },
+    {
+      "id": 37,
+      "categoryId": 4,
+      "code": "CS0001489",
+      "qty": 0,
+      "name": "DELL 27`` Monitor",
+      "warranty": "12 Months Warranty",
+      "cost_price": 3999,
+      "selling_price": 4799,
+      "image_url": "none.png",
+      "special": false,
+      "published": false
+    }
+   ],
+"product_specs":[
+    {
+      "productId": 15,
+      "categoryspecId": 1,
+      "specification": "Intel C2D E4600 2.40Ghz "
+    },
+    {
+      "productId": 16,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-4160 "
+    },
+    {
+      "productId": 17,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-2120 "
+    },
+    {
+      "productId": 18,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-3470 "
+    },
+    {
+      "productId": 19,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-4130 "
+    },
+    {
+      "productId": 20,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-4150 "
+    },
+    {
+      "productId": 21,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-4590 "
+    },
+    {
+      "productId": 22,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-7100 "
+    },
+    {
+      "productId": 23,
+      "categoryspecId": 1,
+      "specification": "Inel Core i7-2600 "
+    },
+    {
+      "productId": 24,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-3470 "
+    },
+    {
+      "productId": 25,
+      "categoryspecId": 1,
+      "specification": "Intel Core i3-7100 "
+    },
+    {
+      "productId": 26,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-6500 "
+    },
+    {
+      "productId": 27,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-6500 "
+    },
+    {
+      "productId": 28,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-7500T "
+    },
+    {
+      "productId": 29,
+      "categoryspecId": 1,
+      "specification": "Intel Core i7-4770 "
+    },
+    {
+      "productId": 30,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-8500 "
+    },
+    {
+      "productId": 31,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-9500T "
+    },
+    {
+      "productId": 32,
+      "categoryspecId": 1,
+      "specification": "Intel Core i5-9500 "
+    },
+    {
+      "productId": 15,
+      "categoryspecId": 2,
+      "specification": " 2GB DDR2 (800Mhz) "
+    },
+    {
+      "productId": 16,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1600MHz) "
+    },
+    {
+      "productId": 17,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1333Mhz) "
+    },
+    {
+      "productId": 18,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1600MHz) "
+    },
+    {
+      "productId": 19,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1333MHz) "
+    },
+    {
+      "productId": 20,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1333Mhz) "
+    },
+    {
+      "productId": 21,
+      "categoryspecId": 2,
+      "specification": " 6GB DDR3 (1333Mhz) "
+    },
+    {
+      "productId": 22,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 23,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR3 (1333Mhz) "
+    },
+    {
+      "productId": 24,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR3 (1600MHz) "
+    },
+    {
+      "productId": 25,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR4 (2133Mhz) "
+    },
+    {
+      "productId": 26,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 ( 2133Mhz) "
+    },
+    {
+      "productId": 27,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 ( 2133Mhz) "
+    },
+    {
+      "productId": 28,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR4 (2400MHz) "
+    },
+    {
+      "productId": 29,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 "
+    },
+    {
+      "productId": 30,
+      "categoryspecId": 2,
+      "specification": " 4GB DDR4 "
+    },
+    {
+      "productId": 31,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 32,
+      "categoryspecId": 2,
+      "specification": " 8GB DDR4 "
+    },
+    {
+      "productId": 15,
+      "categoryspecId": 3,
+      "specification": " 250GB HDD "
+    },
+    {
+      "productId": 16,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 17,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 18,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 19,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 20,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 21,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 22,
+      "categoryspecId": 3,
+      "specification": " 128GB SSD "
+    },
+    {
+      "productId": 23,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 24,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 25,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 26,
+      "categoryspecId": 3,
+      "specification": " 256GB SSD "
+    },
+    {
+      "productId": 27,
+      "categoryspecId": 3,
+      "specification": " 128GB SSD "
+    },
+    {
+      "productId": 28,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 29,
+      "categoryspecId": 3,
+      "specification": " 1TB HDD "
+    },
+    {
+      "productId": 30,
+      "categoryspecId": 3,
+      "specification": " 256GB SSD "
+    },
+    {
+      "productId": 31,
+      "categoryspecId": 3,
+      "specification": " 256GB SSD "
+    },
+    {
+      "productId": 32,
+      "categoryspecId": 3,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 15,
+      "categoryspecId": 5,
+      "specification": " Windows 7 Pro"
+    },
+    {
+      "productId": 16,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 17,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 18,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 19,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 20,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 21,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 22,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 23,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 24,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 25,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 26,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 27,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 28,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Home "
+    },
+    {
+      "productId": 29,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 30,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 31,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 32,
+      "categoryspecId": 5,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 1,
+      "categoryspecId": 6,
+      "specification": "15.6``HD (1366x768) "
+    },
+    {
+      "productId": 2,
+      "categoryspecId": 6,
+      "specification": "11.6``HD IPS Touch (1366x768) "
+    },
+    {
+      "productId": 3,
+      "categoryspecId": 6,
+      "specification": "14`` FHD (1920x1080) "
+    },
+    {
+      "productId": 4,
+      "categoryspecId": 6,
+      "specification": "14`` FHD (1920x1080) "
+    },
+    {
+      "productId": 5,
+      "categoryspecId": 6,
+      "specification": "15.6``HD (1366x768) "
+    },
+    {
+      "productId": 6,
+      "categoryspecId": 6,
+      "specification": "14`` FHD (1920x1080) "
+    },
+    {
+      "productId": 7,
+      "categoryspecId": 6,
+      "specification": "15.6`` FHD (1920x1080) "
+    },
+    {
+      "productId": 8,
+      "categoryspecId": 6,
+      "specification": "14`` FHD (1920x1080) "
+    },
+    {
+      "productId": 9,
+      "categoryspecId": 6,
+      "specification": "15.6`` FHD (1920x1080) "
+    },
+    {
+      "productId": 10,
+      "categoryspecId": 6,
+      "specification": "15.6`` FHD (1920x1080) "
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 6,
+      "specification": "15.6`` (1920x1080)"
+    },
+    {
+      "productId": 12,
+      "categoryspecId": 6,
+      "specification": "14`` FHD (1920x1080) "
+    },
+    {
+      "productId": 1,
+      "categoryspecId": 7,
+      "specification": " I3-4005U @ 1.70GHz "
+    },
+    {
+      "productId": 2,
+      "categoryspecId": 7,
+      "specification": " N3710 @ 1.60Ghz "
+    },
+    {
+      "productId": 3,
+      "categoryspecId": 7,
+      "specification": " i7-6600U @ 2.60 GHz "
+    },
+    {
+      "productId": 4,
+      "categoryspecId": 7,
+      "specification": " AMD Ryzen 5 3500U @ 2.10GHz "
+    },
+    {
+      "productId": 5,
+      "categoryspecId": 7,
+      "specification": " i5-8250 @ 1.60Ghz "
+    },
+    {
+      "productId": 6,
+      "categoryspecId": 7,
+      "specification": " i5-8250U @ 1.60Ghz "
+    },
+    {
+      "productId": 7,
+      "categoryspecId": 7,
+      "specification": " i5-10210U @ 1.60Ghz "
+    },
+    {
+      "productId": 8,
+      "categoryspecId": 7,
+      "specification": " i5-1035G1 @ 1.20Ghz "
+    },
+    {
+      "productId": 9,
+      "categoryspecId": 7,
+      "specification": " i7-8565 @ 1.80Ghz "
+    },
+    {
+      "productId": 10,
+      "categoryspecId": 7,
+      "specification": " i7-8565 @ 1.80Ghz "
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 7,
+      "specification": " i7-8550U @ 1.80Ghz"
+    },
+    {
+      "productId": 12,
+      "categoryspecId": 7,
+      "specification": " i7-8565U @ 1.80Ghz "
+    },
+    {
+      "productId": 1,
+      "categoryspecId": 8,
+      "specification": " 4GB DDR3 (1600MHz) "
+    },
+    {
+      "productId": 2,
+      "categoryspecId": 8,
+      "specification": " 4GB DDR3(1600MHz) "
+    },
+    {
+      "productId": 3,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2133Mhz) "
+    },
+    {
+      "productId": 4,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 5,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2133Mhz) "
+    },
+    {
+      "productId": 6,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 7,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2667Mhz) "
+    },
+    {
+      "productId": 8,
+      "categoryspecId": 8,
+      "specification": " 12GB DDR4 (2667Mhz) "
+    },
+    {
+      "productId": 9,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2400MHz) "
+    },
+    {
+      "productId": 10,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 8,
+      "specification": " 8GB DDR4 (2400Mhz)"
+    },
+    {
+      "productId": 12,
+      "categoryspecId": 8,
+      "specification": " 16GB DDR4 (2400Mhz) "
+    },
+    {
+      "productId": 1,
+      "categoryspecId": 9,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 2,
+      "categoryspecId": 9,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 3,
+      "categoryspecId": 9,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 4,
+      "categoryspecId": 9,
+      "specification": " 256GB SSD "
+    },
+    {
+      "productId": 5,
+      "categoryspecId": 9,
+      "specification": " 480GB SSD "
+    },
+    {
+      "productId": 6,
+      "categoryspecId": 9,
+      "specification": " 256GB NVMe "
+    },
+    {
+      "productId": 7,
+      "categoryspecId": 9,
+      "specification": " 1TB HDD "
+    },
+    {
+      "productId": 8,
+      "categoryspecId": 9,
+      "specification": " 512NVME "
+    },
+    {
+      "productId": 9,
+      "categoryspecId": 9,
+      "specification": " 256GB SSD "
+    },
+    {
+      "productId": 10,
+      "categoryspecId": 9,
+      "specification": " 1TB HDD "
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 9,
+      "specification": " 1TB HDD"
+    },
+    {
+      "productId": 12,
+      "categoryspecId": 9,
+      "specification": " 256GB NVME "
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 10,
+      "specification": " nVidia GeForce MX110 2GB GDDR5"
+    },
+    {
+      "productId": 1,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 2,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home SL"
+    },
+    {
+      "productId": 3,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 4,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 5,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 6,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 7,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 8,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 9,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 10,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 11,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Home"
+    },
+    {
+      "productId": 12,
+      "categoryspecId": 11,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 13,
+      "categoryspecId": 12,
+      "specification": "23.6`` Touch Display "
+    },
+    {
+      "productId": 14,
+      "categoryspecId": 12,
+      "specification": "23.6`` FHD (1920x1080) "
+    },
+    {
+      "productId": 13,
+      "categoryspecId": 13,
+      "specification": " i5-3470 @ 3.2Ghz "
+    },
+    {
+      "productId": 14,
+      "categoryspecId": 13,
+      "specification": " I5-650 @ 3.20Ghz "
+    },
+    {
+      "productId": 13,
+      "categoryspecId": 14,
+      "specification": " 4GB DDR3 (1600Mhz) "
+    },
+    {
+      "productId": 14,
+      "categoryspecId": 14,
+      "specification": " 4GB DDR3 (1333Mhz) "
+    },
+    {
+      "productId": 13,
+      "categoryspecId": 15,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 14,
+      "categoryspecId": 15,
+      "specification": " 500GB HDD "
+    },
+    {
+      "productId": 13,
+      "categoryspecId": 17,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 14,
+      "categoryspecId": 17,
+      "specification": " Windows 10 Pro"
+    },
+    {
+      "productId": 33,
+      "categoryspecId": 18,
+      "specification": "170S7"
+    },
+    {
+      "productId": 34,
+      "categoryspecId": 18,
+      "specification": "E970S"
+    },
+    {
+      "productId": 35,
+      "categoryspecId": 18,
+      "specification": "E233"
+    },
+    {
+      "productId": 36,
+      "categoryspecId": 18,
+      "specification": "27MK400H"
+    },
+    {
+      "productId": 37,
+      "categoryspecId": 18,
+      "specification": "SE2719HR"
+    },
+    {
+      "productId": 33,
+      "categoryspecId": 19,
+      "specification": "17`` 4:3"
+    },
+    {
+      "productId": 34,
+      "categoryspecId": 19,
+      "specification": "19``  (1366x768)"
+    },
+    {
+      "productId": 35,
+      "categoryspecId": 19,
+      "specification": "23`` FHD 1920*1080"
+    },
+    {
+      "productId": 36,
+      "categoryspecId": 19,
+      "specification": "27``"
+    },
+    {
+      "productId": 37,
+      "categoryspecId": 19,
+      "specification": "27``"
+    },
+    {
+      "productId": 33,
+      "categoryspecId": 20,
+      "specification": "LCD Monitor - VGA"
+    },
+    {
+      "productId": 34,
+      "categoryspecId": 20,
+      "specification": "LED Wide Monitor"
+    },
+    {
+      "productId": 35,
+      "categoryspecId": 20,
+      "specification": "LED-Backlit Monitor 3xUSB 3.0 1xVGA 1xHDMI"
+    },
+    {
+      "productId": 36,
+      "categoryspecId": 20,
+      "specification": "VGA / HDMI"
+    },
+    {
+      "productId": 37,
+      "categoryspecId": 20,
+      "specification": "VGA / HDMI / DP"
+    }
+   ],
+"orders":[],
+"transactions":[]
+}

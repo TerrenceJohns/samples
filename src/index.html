@@ -6,225 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Samples</title>
   <script src="js/all.js"></script>
+  <script src="http://localhost:8098"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/vue.js"></script>
   <script src="js/vue-router.js"></script>
-
+  <script src="js/underscore.js"></script>
+  <script src="js/httpvueloader.js"></script>
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="index.css">
-
   <!-- templates -->
-  <script id="tmpOnlineShop" type="text/html">
-    <div>
-      <div class="float-right">
-        <a href="#" class="btn text-primary" @click="showInfo=!showInfo">
-          <i class="fas fa-info"></i>
-        </a>
-      </div>
-      <center>
-        <h2>
-          Computer Online Shop
-        </h2>
-        <span class="text-primary font-weight-bold">
-          Best prices. Shop till you drop
-        </span>
-
-      </center>
-
-      <transition name="slide" mode="out-in">
-        <div class="alert alert-info" v-if="showInfo" v-html="infomessage">
-           
-        </div>
-        
-      </transition>
-
-
-
-    </div>
-  </script>
-  <script id="tmpSystemInfo" type="text/html">
-    <div>
-      <div v-if="Info">
-        <h3>System Info</h3>
-        <hr>
-        <h4 class="text-primary">
-          <i class="fas fa-laptop-code"></i>
-          Operating System</h4>
-        <table class="table table-sm table-borderless">
-          <tr>
-            <td class="tdLabel">
-              Operation system:
-            </td>
-            <td>
-              {{Info.OS}}
-            </td>
-          </tr>
-          <tr>
-            <td class="tdLabel">
-              Version:
-            </td>
-            <td>
-              {{Info.version}}
-            </td>
-          </tr>
-        </table>
-        <hr>
-        <h4 class="text-primary">
-          <i class="fas fa-microchip"></i>
-          Processors
-        </h4>
-        <table class="table table-sm table-borderless">
-          <tr v-for="(p, index) in Info.cpus">
-            <td style="font-weight:500;width:100px">
-              CPU_{{index}}:
-            </td>
-            <td style="width:350px">
-              {{p.model}}
-            </td>
-            <td>
-              <div class="progress">
-                <div :class="{'bg-success':p.load <= 40,'bg-warning':p.load>=40 && p.load<=80,'bg-danger':p.load > 80 }"
-                  class="progress-bar" role="progressbar" :aria-valuenow="(p.load).toFixed(2)"
-                  :style="'width:' + (p.load).toFixed(2) + '%'" aria-valuemin="0" aria-valuemax="100">
-                  <span style="font-size:xx-small">
-                    {{(p.load).toFixed(2)}}%
-                  </span>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <hr>
-        <h4 class="text-primary">
-          <i class="fas fa-sd-card"></i>
-          Memory
-        </h4>
-        <table class="table table-sm table-borderless">
-          <tr>
-            <td class="tdLabel">
-              Total Memory:
-            </td>
-            <td style="width:100px">
-              {{(Info.totalMem ).toFixed(2)}}GB
-            </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar"
-                  :aria-valuenow="(Info.usedMem/Info.totalMem * 100).toFixed(2)"
-                  :style="'width:' + (Info.usedMem/Info.totalMem * 100).toFixed(2) + '%'" aria-valuemin="0"
-                  aria-valuemax="100">
-                  <span style="font-size:xx-small">
-                    {{(Info.usedMem/Info.totalMem * 100).toFixed(2)}}%
-                  </span>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          </tr>
-        </table>
-      </div>
-
-    </div>
-  </script>
-  <script id="tmpOverview" type=text/html> <div>
-    <h2>Terrence Johnson IT - Samples</h2>
-      <p>This electron application is an aggregation of work samples. 
-        I enjoy electron, although most paying work is done with vb.net, Dot Net Nuke, Vuejs for web applications.
-        My background is in the Insurance industry and as such its pointless sharing website urls for password protected sites.
-      </p>
-      <p>
-        You can simply download one executable file - be sure to choose the crrect one for you ooperating system. Its a one click install and you should be able to view the working applications.
-      </p>
-      <p>
-        Thank you for checking out the page.
-      </p>
-
-    </div>
-  </script>
-  <script id="tmpMain" type="text/html">
-    <div>
-      <div id="mySidebar" class="sidebar">
-        <center>
-          <h3>Samples</h3>
-        </center>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action" :class="{active:$route.path=='/'}"
-            @click="gotoOverview">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="mb-1">Overview</h4>
-            </div>
-            <p class="mb-1">
-              Overview of the application.
-            </p>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action" :class="{active:$route.path=='/sysinfo'}"
-            @click="gotoSystemInfo">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="mb-1">System Info</h4>
-            </div>
-            <p class="mb-1">
-              Monitor some system resources.
-            </p>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action" :class="{active:$route.path=='/onlineshop'}"
-            @click="gotoOnlineShop">
-            <div class="d-flex w-100 justify-content-between">
-              <h4 class="mb-1">Online Shop</h4>
-            </div>
-            <p class="mb-1">
-              Online computer shop sample.
-            </p>
-          </a>
-        </div>
-      </div>
-      <div id="mainDiv">
-        <br>
-        <transition name="fade">
-          <router-view></router-view>
-        </transition>
-
-      </div>
-    </div>
-  </script>
+  
 </head>
 
-<body >
-  <div class="mobileController mb-3" style="display:none;max-height:6vh" >
-      <div class="btn-toolbar justify-content-between bg-dark" role="toolbar" >
-        <div class="btn-group btn-group-sm">
-          <a href="#" class="btn text-light" style="-webkit-app-region: drag;" ondblclick="movedbClick();">
-            <i class="fas fa-arrows-alt"></i> Move
-          </a>
-          <a class="btn text-light border-secondary" onclick="toggleOrientation();">
-            <i class="fas fa-sync"></i> <span id="btnOrientation">Landscape</span> 
-          </a>
-          <div class="input-group input-group-sm">
-            <i class="fas fa-dot-circle text-light mt-2 ml-2"></i>
-            <span class="mt-1 ml-1 bg-dark text-light font-weight-600">Device zoom: </span> 
-            <select id="cbZoom" class="form-control ml-1" onchange="setDeviceZoom();">
-              <option value="50%">50%</option>
-              <option value="75%">75%</option>
-              <option value="100%" selected>100%</option>
-              <option value="125%">125%</option>
-              <option value="150%">150%</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="btn-group btn-group-sm">
-          <button class="btn text-danger" onclick="stopTabletSimulation()">
-            <i class="fas fa-times"></i> 
-          </button>
-          
+<body>
+  <div class="mobileController mb-3" style="display:none;max-height:6vh">
+    <div class="btn-toolbar justify-content-between bg-dark" role="toolbar">
+      <div class="btn-group btn-group-sm">
+        <a href="#" class="btn text-light" style="-webkit-app-region: drag;">
+          <i class="fas fa-arrows-alt"></i> Move
+        </a>
+        <a class="btn text-light border-secondary" onclick="toggleOrientation();">
+          <i class="fas fa-sync"></i> <span id="btnOrientation">Landscape</span>
+        </a>
+        <div class="input-group input-group-sm">
+          <i class="fas fa-dot-circle text-light mt-2 ml-2"></i>
+          <span class="mt-1 ml-1 bg-dark text-light font-weight-600">Device zoom: </span>
+          <select id="cbZoom" class="form-control ml-1" onchange="setDeviceZoom();">
+            <option value="50%">50%</option>
+            <option value="75%">75%</option>
+            <option value="100%" selected>100%</option>
+            <option value="125%">125%</option>
+            <option value="150%">150%</option>
+          </select>
         </div>
       </div>
 
+      <div class="btn-group btn-group-sm">
+        <button class="btn text-danger" onclick="stopTabletSimulation()">
+          <i class="fas fa-times"></i>
+        </button>
+
+      </div>
+    </div>
+
   </div>
-  <div id="mainContainer" >
+  <div id="mainContainer">
     <nav class="navbar navbar-dark bg-primary pr-0 sticky-top appNavbar">
       <button class="navbar-toggler navbar-toggler-sm" type="button" data-toggle="collapse" onclick="toggleSideBar();"
         title="Toggle menu">
@@ -235,7 +64,7 @@
       </div>
       <span class="float-right appNavbar">
         <a href="#" class="btn text-light" title="Simulate Tablet" onclick="startSimulation(false)">
-          <i class="fas fa-tablet fa-lg"></i>
+          <i class="fas fa-mobile-alt fa-lg"></i>
         </a>
         <a id="btnClose" class="btn text-danger btn-lg" href="#" onclick="closeapp();">
           <i class="fas fa-times-circle fa-lg"></i>
@@ -253,96 +82,8 @@
   </div>
 
 
-  <script type="text/javascript">
-    const orientation = {
-      portrait:1,
-      landscape:2,
-    };
-    var tabletView = false;
-    var tabletOrientation = 1; 
-    function setDeviceZoom(){
-      var zoomLevel = $("#cbZoom").val();
-      $("#mainContainer").children().css('zoom', zoomLevel);
-    }
-    function movedbClick(e){
-      e.preventDefault();
-      return false;
-    }
-    function closeapp() {
-      window.IPC.send('close-app');
-    }
-
-    function toggleOrientation(){
-      if(tabletOrientation==orientation.portrait) {
-        simulateTablet(true);
-      } else {
-        simulateTablet(false);
-      }
-    };
-    function startSimulation(landscape){
-      $("#mySidebar").css('width', '0px');
-      $("#mainDiv").css('margin-left', '0px');
-      setTimeout(simulateTablet,500,landscape);
-    }
-    function simulateTablet(landscape) {
-      
-      $("#mainContainer").addClass('mobileContainer');
-      $(".mobileController").css('display','');
-      $(".appNavbar").css('display', 'none');
-      $(".tabletNavbar").css('display', '');
-      if (landscape) {
-        $("#mainContainer").removeClass('portrait');
-        $("#mainContainer").addClass('landscape');
-        $("#btnOrientation").html("Change to <b>Portrait</b>");
-        window.IPC.send('tablet-landscape');
-        tabletOrientation = orientation.landscape;
-      } else {
-        $("#mainContainer").removeClass('landscape');
-        $("#mainContainer").addClass('portrait');
-        $("#btnOrientation").html("Change to <b>Landscape</b>");
-        window.IPC.send('tablet-portrait');
-        tabletOrientation = orientation.portrait;
-      }
-      tabletView = true;
-    }
-
-    function stopTabletSimulation() {
-      window.IPC.send('reset');
-      $("#mainContainer").removeClass('mobileContainer');
-      $(".mobileController").css('display','none');
-      $(".appNavbar").css('display', '');
-      $(".tabletNavbar").css('display', 'none');
-      $("#mainContainer").children().css('zoom', 1);
-      $("#cbZoom").val('100%');
-      tabletView = false;
-
-      
-    }
-
-    function toggleSideBar() {
-      var w = $("#mySidebar").css('width');
-      if (!tabletView) {
-        if (w == '250px') {
-          $("#mySidebar").css('width', '0px');
-          $("#mainDiv").css('margin-left', '0px');
-        } else {
-          $("#mySidebar").css('width', '250px');
-          $("#mainDiv").css('margin-left', '250px');
-          
-        }
-      } else {
-        stopTabletSimulation();
-        tabletView = false;
-      }
-
-    }
-  </script>
-  <script src="js/common/field.js"></script>
-  <script src="js/common/select-field.js"></script>
-  <script src="js/apps/system-info.js"></script>
-  <script src="js/apps/overview.js"></script>
-  <script src="js/apps/onlineshop.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/render-index.js"></script>
+  <script src="js/common/data-service.js"></script>
   <script src="js/app.js"></script>
 </body>
 

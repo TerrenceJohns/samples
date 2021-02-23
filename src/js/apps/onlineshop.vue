@@ -1,4 +1,33 @@
-const OnlineShop = {
+<template>
+    <div>
+      <div class="float-right">
+        <a href="#" class="btn text-primary" @click="showInfo=!showInfo">
+          <i class="fas fa-info"></i>
+        </a>
+      </div>
+      <center>
+        <h2>
+          Computer Online Shop
+        </h2>
+        <span class="text-primary font-weight-bold">
+          Best prices. Shop till you drop
+        </span>
+
+      </center>
+
+      <transition name="slide" mode="out-in">
+        <div class="alert alert-info" v-if="showInfo" v-html="infomessage">
+
+        </div>
+
+      </transition>
+
+
+
+    </div>
+</template>
+<script>
+    module.exports = {
     template:$("#tmpOnlineShop").html(),
     data:function(){
         return {
@@ -15,13 +44,20 @@ const OnlineShop = {
     methods:{
         refresh:function(){
             var vm = this; 
+
         },
         simulateTablet:function(){
             simulateTablet(false);
         }
     },
     mounted:function(){
+        window.startServer({filename:'onlineshop.json',port:9001});
+        setApplicationTitle("Online Computer Store", "Computer Store");
         var vm = this;
         vm.refresh();
+    },
+    beforeDestroy:function(){
+        window.stopServer({filename:'onlineshop.json',port:9001});
     }
 }
+</script>

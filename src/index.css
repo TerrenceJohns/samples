@@ -184,3 +184,26 @@ body {
   background: grey; 
 }
 
+.objectPane {
+  min-height: calc(100vh - 150px); /* 100% Full-height */
+  width: 250px; /* 0 width - change this with JavaScript */
+  position: absolute; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  padding:2px;
+  background-color: lightgray; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+.workspace {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 15px;
+  margin-left:250px;
+  
+  
+}
+.table td.fit, 
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
