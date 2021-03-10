@@ -57,17 +57,26 @@
     {
       "id": 1,
       "tableId": 1,
-      "column_name": "id"
+      "column_name": "id",
+      "datatype": "Number",
+      "sqldatatype": "Int",
+      "sqllength": "0"
     },
     {
       "id": 2,
       "tableId": 1,
-      "column_name": "code"
+      "column_name": "code",
+      "datatype": "String",
+      "sqldatatype": "Int",
+      "sqllength": "20"
     },
     {
       "id": 3,
       "tableId": 1,
-      "column_name": "name"
+      "column_name": "name",
+      "datatype": "String",
+      "sqldatatype": "Int",
+      "sqllength": "40"
     },
     {
       "tableId": 8,
@@ -83,6 +92,22 @@
       "tableId": 8,
       "column_name": "last_name",
       "id": 6
+    },
+    {
+      "tableId": 2,
+      "column_name": "id",
+      "datatype": "Number",
+      "sqldatatype": "Int",
+      "sqllength": "0",
+      "id": 7
+    },
+    {
+      "tableId": 2,
+      "column_name": "description",
+      "datatype": "String",
+      "sqldatatype": "Int",
+      "sqllength": "40",
+      "id": 8
     }
   ]
 }

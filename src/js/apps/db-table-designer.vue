@@ -37,16 +37,17 @@
                     :readonly="col.column_name=='id'">
                 </td>
                 <td>
-                  <select class="form-control form-control-sm">
+                  <select class="form-control form-control-sm" v-model="col.datatype">
                     <option value="String">String</option>
                     <option value="Number">Number</option>
                     <option value="Date">Date</option>
                   </select>
                 </td>
                 <td>
-                  <select class="form-control form-control-sm">
+                  <select class="form-control form-control-sm" v-model="col.sqldatatype">
                     <option value="Int">Int</option>
                     <option value="Long">Long</option>
+                    <option value="Int">Varchar</option>
                     <option value="Float">Float</option>
                     <option value="Money">Money</option>
                     <option value="Date">Date</option>
@@ -54,7 +55,7 @@
                   </select>
                 </td>
                 <td>
-                  <input type="number" class="form-control form-control-sm">
+                  <input type="number" class="form-control form-control-sm" v-model="col.sqllength">
                 </td>
                 <td></td>
               </tr>
@@ -67,16 +68,17 @@
                     style="width:200">
                 </td>
                 <td>
-                  <select class="form-control form-control-sm">
+                  <select class="form-control form-control-sm" v-model="NewColumn.datatype">
                     <option value="String">String</option>
                     <option value="Number">Number</option>
                     <option value="Date">Date</option>
                   </select>
                 </td>
                 <td>
-                  <select class="form-control form-control-sm">
+                  <select class="form-control form-control-sm" v-model="NewColumn.sqldatatype">
                     <option value="Int">Int</option>
                     <option value="Long">Long</option>
+                     <option value="Int">Varchar</option>
                     <option value="Float">Float</option>
                     <option value="Money">Money</option>
                     <option value="Date">Date</option>
@@ -84,7 +86,7 @@
                   </select>
                 </td>
                 <td>
-                  <input type="number" class="form-control form-control-sm">
+                  <input type="number" class="form-control form-control-sm" v-model="NewColumn.sqllength">
                 </td>
                 <td>
                   <a href="#" class="btn btn-sm text-primary" @click="columnAdded">
@@ -158,7 +160,10 @@
                 vm.Columns.push(newCol);
                 vm.NewColumn = vm.NewColumn = {
                     tableId: vm.table.id,
-                    column_name: ''
+                    column_name: '',
+                    datatype:'Number',
+                    slqdatatype:'Int',
+                    sqllength:0
                 }
             }
             

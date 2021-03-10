@@ -16,9 +16,9 @@
 </template>
 <script>
     module.exports = {
-    template:$("#tmpOverview").html(),
     mounted:function(){
         setApplicationTitle("Terrence Johnson IT - Samples", "Samples");
+        
     }
 }
 </script>
